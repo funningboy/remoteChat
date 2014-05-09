@@ -1,0 +1,30 @@
+
+<html>
+  <head>
+  </head>
+  <body>
+      <video id="video" width="320" height="240" autoplay controls style="display: inline;"></video>
+      <canvas id="canvas" width="320" height="240" style="display: inline;"></canvas>
+      <script type="text/javascript">
+        <!-- camera video stream -->
+        video = document.querySelector('video');
+        <!-- post proc video stream -->
+        canvas = document.querySelector('canvas');
+        ctx = canvas.getContext('2d');
+        ctx.strokeStyle = '#ff0';
+      navigator.webkitGetUserMedia({video:true, audio:true},
+          function(stream) {
+            video.src = window.webkitURL.createObjectURL(stream);
+            },
+          function(err) {
+            console.log("Unable to get video stream")
+           }
+          );
+      timer = setInterval(
+            function () {
+                ctx.drawImage(video, 0, 0, 320, 240);
+            }, 250);
+
+    </script>
+  </body>
+</html>
