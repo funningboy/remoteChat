@@ -1,8 +1,7 @@
 
-
+import numpy as np
 import cv2
 import StringIO
-import numpy as np
 from PIL import Image
 import gevent
 from jobs import *
@@ -118,6 +117,7 @@ class ImageJobHandler(ImageBaseHandler):
         self._jobs = {
                 'DetectCircle' : DetectCircle,
                 'DetectEdge'   : DetectEdge,
+                'DetectFace'   : DetectFace,
                 }
 
     def work(self, wait=0.5):
