@@ -1,6 +1,6 @@
 
 an example about webrtc image processing via opencv + flask + webrtc
-<img src='https://github.com/funningboy/remoteChat/blob/master/img/img.png'>
+<img src='https://raw.githubusercontent.com/funningboy/remoteChat/master/img/img.png'>
 
 ## requirements
 - opencv
